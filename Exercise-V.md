@@ -140,10 +140,10 @@ db.createCollection("Books")
 
 Inserting tuples in mongo
 ```javascript
-db.Books.insert({"ISBN":"B123","Title":"Database","Author":"Ramu","Publisher":"Sharma","borrowed_by":"Student":"Owais","USN":"IS081","Dept":"ISE"}})
-db.Books.insert({"ISBN":"B124","Title":"Cloud","Author":"Rakesh","Publisher":"Verma","borrowed_by":"Student":"Maitri","USN":"CS067","Dept":"CSE"}})
-db.Books.insert({"ISBN":"B125","Title":"Database","Author":"Ramu","Publisher":"Sharma","borrowed_by":"Student":"Jeevika","USN":"IS055","Dept":"ISE"}})
-db.Books.insert({"ISBN":"B126","Title":"MC","Author":"Ravi","Publisher":"Cengage","borrowed_by":"Student":"Prajwal","USN":"CS085","Dept":"CSE"}})
+db.Books.insert({"ISBN":"B123","Title":"Database","Author":"Ramu","Publisher":"Sharma","borrowed_by":{"Student":"Owais","USN":"IS081","Dept":"ISE"}})
+db.Books.insert({"ISBN":"B124","Title":"Cloud","Author":"Rakesh","Publisher":"Verma","borrowed_by":{"Student":"Maitri","USN":"CS067","Dept":"CSE"}})
+db.Books.insert({"ISBN":"B125","Title":"Database","Author":"Ramu","Publisher":"Sharma","borrowed_by":{"Student":"Jeevika","USN":"IS055","Dept":"ISE"}})
+db.Books.insert({"ISBN":"B126","Title":"MC","Author":"Ravi","Publisher":"Cengage","borrowed_by":{"Student":"Prajwal","USN":"CS085","Dept":"CSE"}})
 ```
 
 To view contents

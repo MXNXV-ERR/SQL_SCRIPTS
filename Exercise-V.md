@@ -129,33 +129,35 @@ GROUP BY B.USN,NAME;
 
 Creating table in mongo
 ```javascript
-db.createCollection("LIBRARY")
+db.createCollection("Books")
 ```
 
 Inserting tuples in mongo
 ```javascript
-db.LIBRARY.insert({"ISBN":1122,"TITLE":'datbase',"AUTHOR":'ABC',"PUBLISHER":'selina',"SSN":2015,"date":'2017-05-29'})
-db.LIBRARY.insert({"ISBN":2233,"TITLE":'datbase',"AUTHOR":'DEF',"PUBLISHER":'mcgraw',"SSN":2016,"date":'2017-06-29' })
-db.LIBRARY.insert({"ISBN":3344,"TITLE":'dip',"AUTHOR":'GHI',"PUBLISHER":'gonzalez',"SSN":2017,"date":'2016-06-29' })
-db.LIBRARY.insert({"ISBN":3355,"TITLE":'os',"AUTHOR":'LKB',"PUBLISHER":'pearson',"SSN":2018,"date":'2016-06-01' })
+db.Books.insert({"ISBN":"B123","Title":"Database","Author":"Ramu","Publisher":"Sharma","borrowed_by":"Student":"Owais","USN":"IS081","Dept":"ISE"}})
+db.Books.insert({"ISBN":"B124","Title":"Cloud","Author":"Rakesh","Publisher":"Verma","borrowed_by":"Student":"Maitri","USN":"CS067","Dept":"CSE"}})
+db.Books.insert({"ISBN":"B125","Title":"Database","Author":"Ramu","Publisher":"Sharma","borrowed_by":"Student":"Jeevika","USN":"IS055","Dept":"ISE"}})
+db.Books.insert({"ISBN":"B126","Title":"MC","Author":"Ravi","Publisher":"Cengage","borrowed_by":"Student":"Prajwal","USN":"CS085","Dept":"CSE"}})
 ```
 
 To view contents
 ```javascript
-db.Employee.find().pretty()
+db.Books.find().pretty()
 ```
 <P ALIGN="CENTER"><IMG SRC="https://github.com/MXNXV-ERR/SQL_SCRIPTS/blob/main/IMGS/Q5E0.png?raw=True"></P>
 
 ### 1)Obtain the book details authored by “author_name”.
 ```javascript 
-db.LIBRARY.find({"AUTHOR":"LKB"})
+db.Books.find({"Author":"Ramu"}).pretty()
 ```
 <P ALIGN="CENTER"><IMG SRC="https://github.com/MXNXV-ERR/SQL_SCRIPTS/blob/main/IMGS/Q5E1.png?raw=True"></P>
 
 ### 2)Obtain the Names of students who have borrowed “Database” books
 ``` javascript
-
+db.Books.find({"Title":"Database"},{"borrowed_by.Student":1})
 ```
+<P ALIGN="CENTER"><IMG SRC="https://github.com/MXNXV-ERR/SQL_SCRIPTS/blob/main/IMGS/Q5E2.png?raw=True"></P>
+
 
 
 ## f) Write a PL/SQL procedure to print the first 8 Fibonacci numbers and a program to call the same.

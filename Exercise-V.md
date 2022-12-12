@@ -124,6 +124,12 @@ GROUP BY B.USN,NAME;
 <P ALIGN="CENTER"><IMG SRC="https://github.com/MXNXV-ERR/SQL_SCRIPTS/blob/main/IMGS/Q5D3.png?raw=True"></P>
 
 ### 4) List the books that begin with the letters “DA” and has never been borrowed by any students.
+```sql
+SELECT *
+FROM BOOKS 
+WHERE TITLE LIKE 'DA%' AND ISBN NOT IN(SELECT ISBN
+                                       FROM BORROWS);
+```
 
 ## e) Create the table, insert suitable tuples and perform the following operations using MongoDB
 
@@ -189,6 +195,7 @@ EXEC FIBONACCI(8)
 
 
 ELSE PROGRAM
+
 ```SQL
 
 ```

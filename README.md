@@ -1,5 +1,6 @@
 # Click on below links for complete solution of each excercise
-* [Excercise-I](https://github.com/MXNXV-ERR/dbmslab/blob/main/Exercise-I.md)<BR>
+* [Excercise-I (3 TABLES)](https://github.com/MXNXV-ERR/dbmslab/blob/main/Exercise-I.md)<BR>
+* [Excercise-I (4 TABLES)](https://github.com/MXNXV-ERR/dbmslab/blob/main/Exercise-I(NEW).md)<BR>
 * [Excercise-III](https://github.com/MXNXV-ERR/dbmslab/blob/main/Exercise-III.md)<br>
 * [Excercise-V](https://github.com/MXNXV-ERR/dbmslab/blob/main/Exercise-V.md)<br>
 

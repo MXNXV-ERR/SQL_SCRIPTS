@@ -25,6 +25,15 @@ compulsorily borrow books.
 &ensp;f) Write a PL/SQL procedure to print the first 8 Fibonacci numbers and a program to call<br>
 &ensp;the same.<br>
 
+## a)Mention the constraints neatly.
+- PRIMARY KEY CONSTRAINT
+    - STUDENTS : USN
+    - BOOKS : ISBN
+    - BORROWS : ISBN,USN
+- REFRENTIAL CONSTRAINTS
+    - BORROWS USN REFERENCES STUDENTS USN
+    - BORROWS ISBN REFRENCES BOOKS ISBN
+
 
 ## d) Create the above tables, insert suitable tuples and perform the following operations in SQL:
 ### Creating entities books,student,borrows
@@ -138,12 +147,46 @@ db.Employee.find().pretty()
 <P ALIGN="CENTER"><IMG SRC="https://github.com/MXNXV-ERR/SQL_SCRIPTS/blob/main/IMGS/Q5E0.png?raw=True"></P>
 
 ### 1)Obtain the book details authored by “author_name”.
-```javascript
+```javascript 
 db.LIBRARY.find({"AUTHOR":"LKB"})
 ```
 <P ALIGN="CENTER"><IMG SRC="https://github.com/MXNXV-ERR/SQL_SCRIPTS/blob/main/IMGS/Q5E1.png?raw=True"></P>
 
 ### 2)Obtain the Names of students who have borrowed “Database” books
 ``` javascript
+
+```
+
+
+## f) Write a PL/SQL procedure to print the first 8 Fibonacci numbers and a program to call the same.
+
+```SQL
+SQL>CREATE OR REPLACE PROCEDURE FIBONACCI(N IN NUMBER)
+...IS
+...A NUMBER;
+...B NUMBER;
+...C NUMBER;
+...I NUMBER;
+...BEGIN
+...     A:=0; B:=1;
+...    DBMS_OUTPUT.PUT_LINE(A);
+...    DBMS_OUTPUT.PUT_LINE(B);
+...    FOR I IN 1..N-2 LOOP
+...        C:=A+B;
+...        DBMS_OUTPUT.PUT_LINE(C);
+...        A:=B;
+...        B:=C;
+...    END LOOP;
+...END FIBONACCI;
+```
+
+
+```sql
+EXEC FIBONACCI(8)
+```
+
+
+ELSE PROGRAM
+```SQL
 
 ```

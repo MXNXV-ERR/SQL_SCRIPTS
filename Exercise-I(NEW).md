@@ -24,6 +24,17 @@ project. Assume the attributes for Employee and Project relations.<br>
  &ensp;Display a message displaying how many employees were awarded the increase.<br>
 
 
+## a)Mention the constraints neatly.
+- PRIMARY KEY CONSTRAINT
+    - EMPLOYEE : SSN
+    - PROJECT : PROJ_NO
+    - ASSIGN : SSN,PROJ_NO
+    - DEPARTMENT : DEPT_NO
+- REFRENTIAL CONSTRAINTS
+    - EMPLOYEE DEPT_NO REFERENCES DEPARTMENT DEPT_ NO
+    - ASSIGN SSN REFERENCES EMPLOYEE SSN
+    - ASSIGN PROJ_NO REFERENCES PROJECT PROJ_NO
+
  ## d)Create the tables, insert suitable tuples (min 6 each) and perform the following operations in SQL
  ### Creating table employee,project,assign,department
 

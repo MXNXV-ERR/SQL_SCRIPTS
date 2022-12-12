@@ -22,6 +22,15 @@ number of boats on any day of the week and the records are to be updated in the 
 &ensp;f) Write a PL/SQL program to check whether a given number is prime or not.<br>
 
 
+## a)Mention the constraints neatly.
+- PRIMARY KEY CONSTRAINT
+    - SAILOR: SAILOR_ID
+    - BOAT : BOAT_ID
+    - RESERVES : SAILOR_ID,BOAT_ID
+- REFRENTIAL CONSTRAINTS
+    - RESERVES SAILOR REFERENCES SAILOR SAILOR_ID
+    - RESERVES BOAT_ID REFERENCES BOAT BOAT_ID
+
 ## d)Create the tables, insert suitable tuples and perform the following operations in SQL:
 ### Creating entities boat,sailor,reserves
 ```SQL

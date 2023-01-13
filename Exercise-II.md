@@ -21,8 +21,8 @@ shipped.<br>
 &ensp;MongoDB<br>
 &emsp;1. Update the details of parts for a given part identifier: #PID.<br>
 &emsp;2. Display all suppliers who supply the part with part identifier: #PID.<br>
-&emsp;3. Write a PL/SQL program to copy the contents of the Shipment table to another table<br>
-&emsp;for maintaining records for specific part number.<br>
+&ensp;f) Write a PL/SQL program to copy the contents of the Shipment table to another table<br>
+&ensp;for maintaining records for specific part number.<br>
 
 
 ## d)Create the above tables, insert suitable tuples and perform the following operations in Oracle SQL:
@@ -118,6 +118,7 @@ WHERE P_COLOR = 'GREEN';
 
 
 ### 4)List the suppliers who supplies exactly two parts.
+Values deleted were recovered from previous step
 ```SQL
 SELECT * 
 FROM SUPPLIER
@@ -149,3 +150,18 @@ Inserted values
 db.WAREHOUSE.find().pretty()
 ```
 <P ALIGN="CENTER"><IMG SRC="https://github.com/MXNXV-ERR/SQL_SCRIPTS/blob/main/IMGS/Q2E0.PNG?raw=True"></P>
+
+### 1. Update the details of parts for a given part identifier: #PID.
+```javascript
+db.WAREHOUSE.update({"PNO":2017},{$set:{"Colour":"Gold"}},{multi:true})
+```
+{multi:true} -> to update multiple documents
+<P ALIGN="CENTER"><IMG SRC="https://github.com/MXNXV-ERR/SQL_SCRIPTS/blob/main/IMGS/Q2E1.PNG?raw=True"></P>
+
+
+### 2.Display all suppliers who supply the part with part identifier: #PID.
+```javascript
+db.WAREHOUSE.find({"PNO":2017},{SNO:1,Sname:1,Address:1})
+```
+
+<P ALIGN="CENTER"><IMG SRC="https://github.com/MXNXV-ERR/SQL_SCRIPTS/blob/main/IMGS/Q2E2.PNG?raw=True"></P>

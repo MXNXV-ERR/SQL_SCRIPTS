@@ -115,3 +115,37 @@ WHERE P_COLOR = 'GREEN';
 <P ALIGN="CENTER"><IMG SRC="https://github.com/MXNXV-ERR/SQL_SCRIPTS/blob/main/IMGS/Q2D3.PNG?raw=True"></P>
 
 <P ALIGN="CENTER"><IMG SRC="https://github.com/MXNXV-ERR/SQL_SCRIPTS/blob/main/IMGS/Q2D31.PNG?raw=True"></P>
+
+
+### 4)List the suppliers who supplies exactly two parts.
+```SQL
+SELECT * 
+FROM SUPPLIER
+WHERE S_ID IN(SELECT S_ID
+              FROM SUPPLY
+              GROUP BY S_ID
+              HAVING COUNT(P_ID)=2);
+```
+<P ALIGN="CENTER"><IMG SRC="https://github.com/MXNXV-ERR/SQL_SCRIPTS/blob/main/IMGS/Q2D4.PNG?raw=True"></P>
+
+## e) Create the table, insert suitable tuples and perform the following operations using MongoDB
+
+Creating table in mongo
+```javascript
+db.createCollection("WAREHOUSE")
+```
+
+Inserting tuples in mongo
+```javascript
+db.WAREHOUSE.insert({"PNO":1947,"Pname":'bolts',"Colour":'Black',"SNO":1234,"Sname":'ABC',"Address":'blore'})
+db.WAREHOUSE.insert({"PNO":2017,"Pname":'chain',"Colour":'Blue',"SNO":4567,"Sname":'DEF',"Address":'chen'})
+db.WAREHOUSE.insert({"PNO":2017,"Pname":'chain',"Colour":'Blue',"SNO":3964,"Sname":'GHI',"Address":'mum'})
+db.WAREHOUSE.insert({"PNO":1919,"Pname":'wheel',"Colour":'white',"SNO":4879,"Sname":'PQR',"Address":'delhi'})
+db.WAREHOUSE.insert({"PNO":1956,"Pname":'nuts',"Colour":'black',"SNO":9988,"Sname":'STFU',"Address":'KOL'})
+```
+
+Inserted values
+```javascript
+db.WAREHOUSE.find().pretty()
+```
+<P ALIGN="CENTER"><IMG SRC="https://github.com/MXNXV-ERR/SQL_SCRIPTS/blob/main/IMGS/Q2E0.PNG?raw=True"></P>

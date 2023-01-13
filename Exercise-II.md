@@ -83,3 +83,35 @@ VALUES('&S_ID','&P_ID',&QUANTITY);
 <FIGCAPTION>SUPPLY</FIGCAPTION>
 <IMG SRC="https://github.com/MXNXV-ERR/SQL_SCRIPTS/blob/main/IMGS/Q26.PNG?raw=True">
 </FIGURE>
+
+
+### 1)Obtain the details of parts supplied by supplier #SNAME.
+
+```SQL
+SELECT * FROM PART
+WHERE P_ID IN(SELECT P_ID FROM SUPPLY
+              WHERE S_ID IN(SELECT S_ID FROM SUPPLIER
+                            WHERE S_NAME = 'RAM'));
+```
+<P ALIGN="CENTER"><IMG SRC="https://github.com/MXNXV-ERR/SQL_SCRIPTS/blob/main/IMGS/Q2D1.PNG?raw=True"></P>
+
+
+### 2)Obtain the Names of suppliers who supply #PNAME.
+
+```sql
+SELECT S_NAME FROM SUPPLIER
+WHERE S_ID IN(SELECT S_ID FROM SUPPLY
+              WHERE P_ID IN(SELECT P_ID FROM PART
+     	                    WHERE P_NAME = 'BOLTS'));
+```
+<P ALIGN="CENTER"><IMG SRC="https://github.com/MXNXV-ERR/SQL_SCRIPTS/blob/main/IMGS/Q2D2.PNG?raw=True"></P>
+
+
+### 3)Delete the parts which are in #PCOLOR.
+```sql
+DELETE FROM PART
+WHERE P_COLOR = 'GREEN';
+```
+<P ALIGN="CENTER"><IMG SRC="https://github.com/MXNXV-ERR/SQL_SCRIPTS/blob/main/IMGS/Q2D3.PNG?raw=True"></P>
+
+<P ALIGN="CENTER"><IMG SRC="https://github.com/MXNXV-ERR/SQL_SCRIPTS/blob/main/IMGS/Q2D31.PNG?raw=True"></P>

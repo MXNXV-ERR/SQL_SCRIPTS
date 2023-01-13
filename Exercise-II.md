@@ -35,7 +35,7 @@ P_ID VARCHAR2(10) NOT NULL PRIMARY KEY,
 P_NAME VARCHAR2(10),
 P_COLOR CHAR(5));
 ```
-<P ALIGN="CENTER"><IMG SRC="https://github.com/MXNXV-ERR/SQL_SCRIPTS/blob/main/IMGS/Q21.png?raw=True"></P>
+<P ALIGN="CENTER"><IMG SRC="https://github.com/MXNXV-ERR/SQL_SCRIPTS/blob/main/IMGS/Q21.PNG?raw=True"></P>
 
 
 ```SQL
@@ -45,7 +45,7 @@ S_NAME VARCHAR2(10),
 S_ADD VARCHAR2(20),
 PRIMARY KEY(S_ID));
 ```
-<P ALIGN="CENTER"><IMG SRC="https://github.com/MXNXV-ERR/SQL_SCRIPTS/blob/main/IMGS/Q22.png?raw=True"></P>
+<P ALIGN="CENTER"><IMG SRC="https://github.com/MXNXV-ERR/SQL_SCRIPTS/blob/main/IMGS/Q22.PNG?raw=True"></P>
 
 
 ```SQL
@@ -58,7 +58,7 @@ FOREIGN KEY(S_ID) REFERENCES SUPPLIER(S_ID) ON DELETE CASCADE,
 PRIMARY KEY(S_ID,P_ID));
 ```
 
-<P ALIGN="CENTER"><IMG SRC="https://github.com/MXNXV-ERR/SQL_SCRIPTS/blob/main/IMGS/Q23.png?raw=True"></P>
+<P ALIGN="CENTER"><IMG SRC="https://github.com/MXNXV-ERR/SQL_SCRIPTS/blob/main/IMGS/Q23.PNG?raw=True"></P>
 
 
 ### Inserting values into the tables
@@ -77,9 +77,9 @@ VALUES('&S_ID','&P_ID',&QUANTITY);
 
  <FIGURE>
 <FIGCAPTION>PART</FIGCAPTION>
-<IMG SRC="https://github.com/MXNXV-ERR/SQL_SCRIPTS/blob/main/IMGS/Q24.png?raw=True">
+<IMG SRC="https://github.com/MXNXV-ERR/SQL_SCRIPTS/blob/main/IMGS/Q24.PNG?raw=True">
 <FIGCAPTION>SUPPLIER</FIGCAPTION>
-<IMG SRC="https://github.com/MXNXV-ERR/SQL_SCRIPTS/blob/main/IMGS/Q25.png?raw=True">
+<IMG SRC="https://github.com/MXNXV-ERR/SQL_SCRIPTS/blob/main/IMGS/Q25.PNG?raw=True">
 <FIGCAPTION>SUPPLY</FIGCAPTION>
-<IMG SRC="https://github.com/MXNXV-ERR/SQL_SCRIPTS/blob/main/IMGS/Q26.png?raw=True">
+<IMG SRC="https://github.com/MXNXV-ERR/SQL_SCRIPTS/blob/main/IMGS/Q26.PNG?raw=True">
 </FIGURE>

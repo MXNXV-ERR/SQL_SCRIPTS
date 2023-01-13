@@ -10,18 +10,18 @@ compulsorily borrow books.
 &ensp;b) Design the ER diagram for the problem statement<br>
 &ensp;c) State the schema diagram for the ER diagram.<br>
 &ensp;d) Create the above tables, insert suitable tuples and perform the following operations in<br>
-&ensp;SQL:<br>
-&ensp;1. Obtain the names of the student who has borrowed either book bearing ISBN ‘123’<br>
-&ensp;or ISBN ‘124’.<br>
-&ensp;2. Obtain the Names of female students who have borrowed “Database” books.<br>
-&ensp;3. Find the number of books borrowed by each student. Display the student details<br>
-&ensp;along with the number of books.<br>
-&ensp;4. List the books that begin with the letters “DA” and has never been borrowed by any<br>
-&ensp;students.<br>
+&emsp;SQL:<br>
+&emsp;1. Obtain the names of the student who has borrowed either book bearing ISBN ‘123’<br>
+&emsp;or ISBN ‘124’.<br>
+&emsp;2. Obtain the Names of female students who have borrowed “Database” books.<br>
+&emsp;3. Find the number of books borrowed by each student. Display the student details<br>
+&emsp;along with the number of books.<br>
+&emsp;4. List the books that begin with the letters “DA” and has never been borrowed by any<br>
+&emsp;students.<br>
 &ensp;e) Create the table, insert suitable tuples and perform the following operations using<br>
 &ensp;MongoDB<br>
-&ensp;1. Obtain the book details authored by “author_name”.<br>
-&ensp;2. Obtain the Names of students who have borrowed “Database” books.<br>
+&emsp;1. Obtain the book details authored by “author_name”.<br>
+&emsp;2. Obtain the Names of students who have borrowed “Database” books.<br>
 &ensp;f) Write a PL/SQL procedure to print the first 8 Fibonacci numbers and a program to call<br>
 &ensp;the same.<br>
 

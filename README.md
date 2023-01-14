@@ -3,6 +3,7 @@
 * [Excercise-I (4 TABLES)(Recommended)](https://github.com/MXNXV-ERR/dbmslab/blob/main/Exercise-I(NEW).md)<BR>
 * [Excercise-II(WIP)](https://github.com/MXNXV-ERR/dbmslab/blob/main/Exercise-II.md)<BR>
 * [Excercise-III](https://github.com/MXNXV-ERR/dbmslab/blob/main/Exercise-III.md)<br>
+* [Excercise-IV(WIP)](https://github.com/MXNXV-ERR/dbmslab/blob/main/Exercise-IV.md)<BR>
 * [Excercise-V](https://github.com/MXNXV-ERR/dbmslab/blob/main/Exercise-V.md)<br>
 
 

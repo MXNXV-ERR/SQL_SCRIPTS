@@ -165,3 +165,32 @@ db.WAREHOUSE.find({"PNO":2017},{SNO:1,Sname:1,Address:1})
 ```
 
 <P ALIGN="CENTER"><IMG SRC="https://github.com/MXNXV-ERR/SQL_SCRIPTS/blob/main/IMGS/Q2E2.PNG?raw=True"></P>
+
+## f) Write a PL/SQL program to copy the contents of the Shipment table to another table for maintaining records for specific part number.
+
+We cant use create in PL/SQL so we type this commmand first<br>
+This creates a table "SHIPMENT" with columns same as "SUPPLY" without copying data inside the table(due to where 1=2)
+```sql
+CREATE TABLE SHIPMENT AS
+(SELECT * FROM SUPPLY
+WHERE 1 = 2);
+```
+still working to get better
+
+The PL/SQL now 👇
+``` SQL 
+DECLARE 
+	CURSOR C1 IS SELECT * FROM SUPPLY
+        WHERE P_ID IN (101,102,103,104); --PUT PART NUMBER WHICH WE ARE INTERESTED IN HERE
+	V_REC SUPPLY%ROWTYPE;
+BEGIN
+	OPEN C1;
+	LOOP
+	    FETCH C1 INTO V_REC;
+	    EXIT WHEN C1%NOTFOUND;
+        INSERT INTO SHIPMENT VALUES(V_REC.P_ID, V_REC.S_ID, V_REC.QUANTITY);
+    END LOOP;
+    CLOSE C1;
+END;
+/
+```

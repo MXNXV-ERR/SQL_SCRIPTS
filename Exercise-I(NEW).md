@@ -41,7 +41,7 @@ project. Assume the attributes for Employee and Project relations.<br>
 ```SQL
 CREATE TABLE DEPARTMENT( 
 DEPTNO VARCHAR2(10) NOT NULL PRIMARY KEY, 
-DEPTNAME VARCAHR2(20));
+DEPTNAME VARCHAR2(20));
 ```
 <P ALIGN="CENTER"><IMG SRC="https://github.com/MXNXV-ERR/SQL_SCRIPTS/blob/main/IMGS/Q14.png?raw=True"></P>
 <BR>

@@ -107,7 +107,7 @@ SELECT B.BID,BLOC,COUNT(ACCNO)
 FROM ACCOUNT A JOIN BRANCH B ON A.BID=B.BID
 GROUP BY B.BID,BLOC;
 ```
-<P ALIGN="CENTER"><IMG SRC="https://github.com/MXNXV-ERR/SQL_SCRIPTS/blob/main/IMGS/Q4D1.PNG?raw=True"></P>
+<P ALIGN="CENTER"><IMG SRC="https://github.com/MXNXV-ERR/SQL_SCRIPTS/blob/main/IMGS/Q4D2.png?raw=True"></P>
 
 ### 3.Obtain the details of customers who have performed at least 3 transactions.
 ```SQL
@@ -118,6 +118,7 @@ WHERE CID IN(SELECT CID
              GROUP BY CID 
              HAVING COUNT(TID)>=3);
 ```
+<P ALIGN="CENTER"><IMG SRC="https://github.com/MXNXV-ERR/SQL_SCRIPTS/blob/main/IMGS/Q4D3.png?raw=True"></P>
 
 ### 4.List the details of branches where the number of accounts is less than the average number of accounts in all branches.
 ```SQL
@@ -136,5 +137,7 @@ GROUP BY B.BID,BLOC
 HAVING COUNT(ACCNO)<(SELECT AVG(COUNT(ACCNO)) 
                            FROM ACCOUNT GROUP BY BID);
 ```
+<P ALIGN="CENTER"><IMG SRC="https://github.com/MXNXV-ERR/SQL_SCRIPTS/blob/main/IMGS/Q4D4.png?raw=True"></P>
+
 
 ## d)Create the table, insert suitable tuples and perform the following operations using MongoDB

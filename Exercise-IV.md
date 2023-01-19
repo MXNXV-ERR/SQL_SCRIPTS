@@ -162,3 +162,27 @@ db.Bank.findOne({bid:2},{bname:1})
 ```
 
 ## e) Using cursors demonstrate the process of copying the contents of one table to a new table.
+
+Run this first without creating file
+```sql
+create table branchcopy as
+(select * from branch
+Where 1 = 2);
+```
+
+The PL/SQL program
+```sql
+Declare 
+	Cursor c1 is select * from branch;
+	V_rec branch%rowtype;
+Begin
+	Open c1;
+	Loop
+	Fetch c1 into v_rec;
+	Exit when c1%not found;
+Insert into shipment values(v_rec.b_no, v_rec.addr);
+End loop;
+Close c1;
+End;
+/
+```

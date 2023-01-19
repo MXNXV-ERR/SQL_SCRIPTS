@@ -141,3 +141,24 @@ HAVING COUNT(ACCNO)<(SELECT AVG(COUNT(ACCNO))
 
 
 ## d)Create the table, insert suitable tuples and perform the following operations using MongoDB
+
+```javascript
+db.createCollection("Bank")
+```
+```javascript
+db.Bank.insertOne({name:'John',accno:85676989,balance:4500,bid:2,bname:"Richmond Road"})
+db.Bank.insertOne({name:'John',accno:634655656,balance:3000,bid:3,bname:"Ramaiah Nagar"})
+db.Bank.insertOne({name:'Sita',accno:63466556435,balance:500,bid:1,bname:"Kalasi palya"})
+db.Bank.insertOne({name:'Sita',accno:63466556435,balance:500,bid:2,bname:"Richmond Road"})
+```
+
+### 1)Find the branch name for a given Branch_ID.
+```javascript
+db.Bank.findOne({bid:2},{bname:1})
+```
+### 2)List the total number of accounts for each customer.
+```javascript
+ db.Bank.aggregate([{$group:{_id:"$name",tot_acc:{$sum:1}}}])
+```
+
+## e) Using cursors demonstrate the process of copying the contents of one table to a new table.

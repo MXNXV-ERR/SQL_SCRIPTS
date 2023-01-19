@@ -180,7 +180,7 @@ Begin
 	Loop
 	Fetch c1 into v_rec;
 	Exit when c1%not found;
-Insert into shipment values(v_rec.b_no, v_rec.addr);
+Insert into branchcopy values(v_rec.b_no, v_rec.addr);
 End loop;
 Close c1;
 End;
